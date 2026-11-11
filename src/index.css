@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FAFAFA;
+    color: #1D1D1F;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #F05138;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom subtle scrollbars for navigator and code blocks */
+.swift-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.swift-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.swift-scroll::-webkit-scrollbar-thumb {
+  background: #D2D2D7;
+  border-radius: 9999px;
+}
+
+.swift-scroll::-webkit-scrollbar-thumb:hover {
+  background: #AEAEB2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
